@@ -1,4 +1,4 @@
-// Monteiro & Graciano — interações da homepage
+// Monteiro & Graciano — interações do site
 
 document.addEventListener('DOMContentLoaded', function () {
   // Menu mobile
@@ -21,26 +21,6 @@ document.addEventListener('DOMContentLoaded', function () {
       });
     });
   }
-
-  // Botões "Saiba mais" (acordeões de serviços e e-Social)
-  document.querySelectorAll('.service-more').forEach(function (btn) {
-    btn.addEventListener('click', function () {
-      var targetId = btn.getAttribute('data-target');
-      var target = document.getElementById(targetId);
-      if (!target) return;
-
-      var isHidden = target.hasAttribute('hidden');
-      if (isHidden) {
-        target.removeAttribute('hidden');
-        btn.setAttribute('aria-expanded', 'true');
-        btn.querySelector('span').textContent = '↑';
-      } else {
-        target.setAttribute('hidden', '');
-        btn.setAttribute('aria-expanded', 'false');
-        btn.querySelector('span').textContent = '→';
-      }
-    });
-  });
 
   // Ano corrente no rodapé
   var anoAtual = document.getElementById('anoAtual');
